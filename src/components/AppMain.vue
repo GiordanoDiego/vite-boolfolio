@@ -36,10 +36,21 @@ export default {
     <main>
         <div class="my_container">
             <div class="row">
-                <div v-for="projects in project" :key="project.id" class="col">
-                    <h2>
+                <div v-for="project in projects" :key="project.id" class="col project_container">
+                    <h5>
+                        {{ project.id }} - 
                         {{ project.title}}
-                    </h2>
+                    </h5>
+                    <div>
+                        Tipo: {{ project.type.name }}
+                    </div>
+                    <div>
+                        <ul>
+                            <li v-for="technology in project.technologies" :key="project.id">
+                                {{ technology.title }}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,4 +59,8 @@ export default {
 
 <style lang="scss" scoped>
     @use'../assets/SCSS/main.scss';
+
+    .project_container{
+        border: 1px solid black;
+    }
 </style>

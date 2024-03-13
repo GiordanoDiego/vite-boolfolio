@@ -5,11 +5,12 @@
         2) Dichiarazione del componente all'interno dell'oggetto
         3) Utilizzo del componente    
 */
+import axios from 'axios'; // importo elemento axios
 
 export default {
     data(){
         return{
-            
+            projects: []
         }
     },
     components: {
@@ -18,6 +19,13 @@ export default {
    
     methods: {
 
+    },
+    mounted(){ //montarlo
+        axios.get('http://127.0.0.1:8000/api/projects')
+        .then((response) => {
+            this.projects = response.data.results.data;
+            console.log(this.projects);
+        });
     }
 }
 
@@ -27,7 +35,13 @@ export default {
 <template>
     <main>
         <div class="my_container">
-            main
+            <div class="row">
+                <div v-for="projects in project" :key="project.id" class="col">
+                    <h2>
+                        {{ project.title}}
+                    </h2>
+                </div>
+            </div>
         </div>
     </main>
 </template>

@@ -24,11 +24,7 @@ export default {
 </script>
 
 <template>
-    <footer>
-        <div class="my_container">
-            footer
-        </div>
-    </footer>
+ 
 </template>
 
 <style lang="scss" scoped>

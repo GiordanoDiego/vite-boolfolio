@@ -25,7 +25,7 @@ export default {
 <template>
      <header>
         <div class="my_container">
-            header
+            <h1 class="text-center"> Projects </h1>
         </div>
      </header>
 </template>

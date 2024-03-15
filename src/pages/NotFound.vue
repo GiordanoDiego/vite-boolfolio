@@ -29,13 +29,13 @@ export default {
 </script>
 
 <template>
-    <main>
-        <router-view></router-view>
-    </main>
+   <div>
+        Progetto non trovato
+   </div>
 </template>
 
 <style lang="scss" scoped>
     @use'../assets/SCSS/main.scss';
 
-    
+   
 </style>

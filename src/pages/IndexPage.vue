@@ -5,40 +5,41 @@
         2) Dichiarazione del componente all'interno dell'oggetto
         3) Utilizzo del componente    
 */
-
+import axios from 'axios'; // importo elemento axios
 
 export default {
     data(){
-        return {
+        return{
             
         }
-        
+    },
+    components: {
+       
     },
    
     methods: {
 
+    },
+    mounted(){ //montarlo
+        
     }
 }
+
 
 </script>
 
 <template>
-     <header>
-        <div class="my_container">
-            <ul>
-                <li>
-                    <router-link :to="{ name: 'home' }" class = ""> Home </router-link>
-                </li>
-
-                <li>
-                    <router-link :to="{ name: 'projects.index' }" class = ""> Projects </router-link>
-                </li>
-            </ul>
+   <div class="row">
+        <div class="col">
+            <h1>
+                Home page
+            </h1>
         </div>
-     </header>
+   </div>
 </template>
 
 <style lang="scss" scoped>
     @use'../assets/SCSS/main.scss';
-    @use '../assets/SCSS/header.scss';
+
+   
 </style>
